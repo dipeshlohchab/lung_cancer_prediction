@@ -1,11 +1,153 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-    <title>Home</title>
-</head>
-<body>
-    <h1>Welcome to the home page!</h1>
-    <p>Click <a href="/about">here</a> to go to the about page.</p>
-</body>
-</html> 
- The  about  page is similar to the  index  page, but it has a different title and a different message. 
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lung Cancer Prediction</title>
+        <link rel="stylesheet" href="static/style.css"> <!-- Link to the external stylesheet -->
+    </head>
+    <body>
+        <div class="container">
+            <h1>Lung Cancer Prediction</h1>
+            <button id="toggle-darkmode" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+            
+            <form action="/predict" method="POST">
+                <div class="form-group">
+                    <label for="age">AGE:</label>
+                    <input type="number" id="age" name="age" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="gender">GENDER:</label>
+                    <select id="gender" name="gender" required>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="smoking">SMOKING:</label>
+                    <select id="smoking" name="smoking" required>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="finger-discoloration">FINGER DISCOLORATION:</label>
+                    <select id="finger-discoloration" name="finger-discoloration" required>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="level">MENTAL STRESS:</label>
+                    <select id="level" name="level" required>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="exposure-pol">EXPOSURE TO POLLUTION:</label>
+                    <select id="exposure-pol" name="exposure-pol" required>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="long-term-illness">LONG TERM ILLNESS:</label>
+                    <select id="long-term-illness" name="long-term-illness" required>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="energy">ENERGY LEVEL:</label>
+                    <input type="number" id="energy" name="energy" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="immune-weakness">IMMUNE WEAKNESS:</label>
+                    <select id="immune-weakness" name="immune-weakness" required>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="breathing-issue">BREATHING ISSUE:</label>
+                    <select id="breathing-issue" name="breathing-issue" required>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="alcohol-consumption">ALCOHOL CONSUMPTION:</label>
+                    <select id="alcohol-consumption" name="alcohol-consumption" required>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="throat-discomfort">THROAT DISCOMFORT:</label>
+                    <select id="throat-discomfort" name="throat-discomfort" required>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="oxygen-saturation">OXYGEN SATURATION:</label>
+                    <input type="number" id="oxygen-saturation" name="oxygen-saturation" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="chest-tightness">CHEST TIGHTNESS:</label>
+                    <select id="chest-tightness" name="chest-tightness" required>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="family-history">FAMILY HISTORY:</label>
+                    <select id="family-history" name="family-history" required>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="smoking-family-history">SMOKING FAMILY HISTORY:</label>
+                    <select id="smoking-family-history" name="smoking-family-history" required>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="stress-immune">STRESS IMMUNE:</label>
+                    <select id="stress-immune" name="stress-immune" required>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+                
+                <button type="submit">Predict</button>
+            </form>
+
+            <div id="result"> Result: 
+                <span id="prediction"></span>:
+            </div>
+            
+        </div>
+
+        <script src="static/script.js"></script>
+    </body>
+    </html>
