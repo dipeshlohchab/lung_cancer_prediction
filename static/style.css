@@ -55,7 +55,10 @@ form {
     display: flex;
     flex-direction: column;
 }
-
+.form-group{
+    margin-left: 20%;
+    margin-right: 10%;
+}
 label {
     margin: 10px 0 5px;
     font-weight: bold;
