@@ -80,38 +80,6 @@ Your app will be available at `http://127.0.0.1:5000`.
 
 ---
 
-## Deployment on Render
-
-1. **Create a `requirements.txt` file**
-   ```sh
-   pip freeze > requirements.txt
-   ```
-
-2. **Create a `start.sh` file**
-   ```sh
-   #!/bin/bash
-   gunicorn -w 4 -b 0.0.0.0:5000 app:app
-   ```
-
-3. **Push to GitHub**
-   ```sh
-   git init
-   git add .
-   git commit -m "Initial commit"
-   git push origin main
-   ```
-
-4. **Deploy on Render:**
-   - Go to [Render](https://render.com/)
-   - Click **New Web Service**
-   - Select **GitHub Repository**
-   - **Set Environment:** Python
-   - **Build Command:** `pip install -r requirements.txt`
-   - **Start Command:** `bash start.sh`
-   - Click **Deploy**
-
----
-
 ## Issues & Contributing
 If you find any issues, please raise them in the GitHub repository. Contributions are welcome!
 
