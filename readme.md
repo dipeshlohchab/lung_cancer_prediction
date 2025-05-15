@@ -22,7 +22,7 @@ This is a web application for lung cancer prediction based on various health par
 
 ### **1️⃣ Clone the Repository**
 ```sh
-git clone https://github.com/your-username/lung-cancer-prediction.git
+git clone https://github.com/dipeshlohchab/lung-cancer-prediction.git
 cd lung-cancer-prediction
 ```
 
